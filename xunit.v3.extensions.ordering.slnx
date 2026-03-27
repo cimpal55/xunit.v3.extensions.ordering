@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/xunit.v3.ordering/xunit.v3.ordering.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/xunit.v3.ordering.tests/xunit.v3.ordering.tests.csproj" Id="b346ae6a-7f74-4c76-a443-c68301b92a5b" />
+  </Folder>
+</Solution>
