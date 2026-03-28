@@ -1,9 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <PackageId>xunit.v3.extensions.ordering</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>cimpal55</Authors>
+    <Description>Ordering extensions for xUnit.net v3. Inspired by Xunit.Extensions.Ordering.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/cimpal55/xunit.v3.extensions.ordering</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/cimpal55/xunit.v3.extensions.ordering</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>xunit xunitv3 testing ordering</PackageTags>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3.extensibility.core" Version="3.2.2" />
+  </ItemGroup>
 
 </Project>
