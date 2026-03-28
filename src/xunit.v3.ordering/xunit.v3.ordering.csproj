@@ -1,33 +1,45 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;net8.0</TargetFrameworks>
     <Nullable>enable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
 
     <PackageId>xunit.v3.extensions.ordering</PackageId>
-    <Version>0.1.1</Version>
+    <Version>0.2.0</Version>
     <Authors>cimpal55</Authors>
-    <Description>Ordering extensions for xUnit.net v3. Inspired by Xunit.Extensions.Ordering.</Description>
+    <Description>Ordering extensions for xUnit.net v3. Provides test method, class, and collection ordering via [Order] attribute.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
 
     <RepositoryUrl>https://github.com/cimpal55/xunit.v3.extensions.ordering</RepositoryUrl>
     <PackageProjectUrl>https://github.com/cimpal55/xunit.v3.extensions.ordering</PackageProjectUrl>
-	<PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryType>git</RepositoryType>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
 
     <PackageTags>xunit xunitv3 testing ordering</PackageTags>
-	<ImplicitUsings>disable</ImplicitUsings>
-	<LangVersion>latest</LangVersion>
-	<IncludeSymbols>true</IncludeSymbols>
+    <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
 
+  <!-- Shared dependency: interfaces and attributes -->
   <ItemGroup>
     <PackageReference Include="xunit.v3.extensibility.core" Version="3.2.2" />
-	<None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <!-- Framework extension: only available on net8.0+ -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
+    <PackageReference Include="xunit.v3.core" Version="3.2.2">
+      <ExcludeAssets>build;buildTransitive</ExcludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <!-- Exclude Framework files from netstandard2.0 build -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <Compile Remove="Framework/**/*.cs" />
   </ItemGroup>
 
 </Project>
