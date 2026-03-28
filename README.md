@@ -1,20 +1,16 @@
 # xunit.v3.extensions.ordering
 
-Simple ordering extensions for xUnit.net v3.
+Simple ordering extensions for [xUnit.net v3](https://xunit.net/).
 
 This package lets you control the execution order of test methods and test collections using a `[Order]` attribute.
 
-Inspired by `Xunit.Extensions.Ordering`, but implemented specifically for xUnit v3 using its public extension points.
-
----
+Inspired by [Xunit.Extensions.Ordering](https://github.com/tomaszeman/Xunit.Extensions.Ordering), but implemented specifically for xUnit v3 using its public extension points.
 
 ## Installation
 
 ```bash
 dotnet add package xunit.v3.extensions.ordering
 ```
-
----
 
 ## Usage
 
@@ -33,8 +29,6 @@ using Xunit.v3.Extensions.Ordering;
 ```
 
 > If collection order matters, parallelization should be disabled. Otherwise xUnit may run collections in parallel and ignore ordering.
-
----
 
 ### Order test methods
 
@@ -60,8 +54,6 @@ Runs in order:
 ```
 AddItemToCart → ApplyDiscount → CompletePayment
 ```
-
----
 
 ### Order test collections
 
@@ -115,8 +107,6 @@ Execution order:
 Setup → Tests → Cleanup
 ```
 
----
-
 ## Behavior
 
 * ordering is ascending (`Order(1)` runs before `Order(2)`)
@@ -124,14 +114,10 @@ Setup → Tests → Cleanup
 * tests without `[Order]` default to `0`
 * same order values are resolved by name (to keep execution deterministic)
 
----
-
 ## Limitations
 
 * ordering test classes inside a collection is not supported (xUnit v3 does not expose a public API for this)
 * this package does not replace the test framework or runner
-
----
 
 ## Migration notes
 
@@ -141,15 +127,18 @@ If you used `Xunit.Extensions.Ordering` (v2):
 * registration now uses `typeof(...)` instead of strings
 * assembly fixtures are handled natively by xUnit v3
 
----
+| Before (v2) | After (v3) |
+|---|---|
+| `[Order(1)]` on methods/classes | `[Order(1)]` — same |
+| `[assembly: TestCaseOrderer("...", "...")]` | `[assembly: TestCaseOrderer(typeof(OrderedTestCaseOrderer))]` |
+| `[assembly: TestCollectionOrderer("...", "...")]` | `[assembly: TestCollectionOrderer(typeof(OrderedTestCollectionOrderer))]` |
+| Custom assembly fixtures | Use xUnit v3 native assembly fixtures |
 
 ## License
 
 MIT
 
----
-
 ## Links
 
-* GitHub: https://github.com/cimpal55/xunit.v3.extensions.ordering
-* NuGet: *(coming soon)*
+- [GitHub Repository](https://github.com/cimpal55/xunit.v3.extensions.ordering)
+- [NuGet Package](https://www.nuget.org/packages/xunit.v3.extensions.ordering) *(coming soon)*
