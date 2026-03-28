@@ -1,10 +1,14 @@
+[![Build](https://github.com/cimpal55/xunit.v3.extensions.ordering/actions/workflows/ci.yml/badge.svg)](https://github.com/cimpal55/xunit.v3.extensions.ordering/actions/workflows/ci.yml)
+[![NuGet](https://img.shields.io/nuget/v/xunit.v3.extensions.ordering.svg)](https://www.nuget.org/packages/xunit.v3.extensions.ordering)
+[![License](https://img.shields.io/github/license/cimpal55/xunit.v3.extensions.ordering)](LICENSE)
+
 # xunit.v3.extensions.ordering
 
 Simple ordering extensions for [xUnit.net v3](https://xunit.net/).
 
 This package lets you control the execution order of test methods and test collections using a `[Order]` attribute.
 
-Inspired by [Xunit.Extensions.Ordering](https://github.com/tomaszeman/Xunit.Extensions.Ordering), but implemented specifically for xUnit v3 using its public extension points.
+Inspired by [Xunit.Extensions.Ordering](https://github.com/tomaszeman/Xunit.Extensions.Ordering), but implemented specifically for xUnit v3.
 
 ## Installation
 
