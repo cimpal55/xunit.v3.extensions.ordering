@@ -19,7 +19,8 @@
 
     <PackageTags>xunit xunitv3 testing ordering</PackageTags>
 	<ImplicitUsings>disable</ImplicitUsings>
-    <IncludeSymbols>true</IncludeSymbols>
+	<LangVersion>latest</LangVersion>
+	<IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
