@@ -6,7 +6,7 @@
     <ImplicitUsings>disable</ImplicitUsings>
 
     <PackageId>xunit.v3.extensions.ordering</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Authors>cimpal55</Authors>
     <Description>Ordering extensions for xUnit.net v3. Inspired by Xunit.Extensions.Ordering.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
