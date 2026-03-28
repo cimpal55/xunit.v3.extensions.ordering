@@ -2,22 +2,26 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
 
     <PackageId>xunit.v3.extensions.ordering</PackageId>
     <Version>0.1.0</Version>
-    <Authors>cimpal55</Authors>
+    <Authors>Vlad Naers</Authors>
+    <Company>cimpal55</Company>
     <Description>Ordering extensions for xUnit.net v3. Inspired by Xunit.Extensions.Ordering.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/cimpal55/xunit.v3.extensions.ordering</PackageProjectUrl>
+
     <RepositoryUrl>https://github.com/cimpal55/xunit.v3.extensions.ordering</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/cimpal55/xunit.v3.extensions.ordering</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+
     <PackageTags>xunit xunitv3 testing ordering</PackageTags>
+	<ImplicitUsings>disable</ImplicitUsings>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
 
   <ItemGroup>
