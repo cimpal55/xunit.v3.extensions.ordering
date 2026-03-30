@@ -1,16 +1,18 @@
 [![Build](https://github.com/cimpal55/xunit.v3.extensions.ordering/actions/workflows/ci.yml/badge.svg)](https://github.com/cimpal55/xunit.v3.extensions.ordering/actions/workflows/ci.yml)
 [![NuGet Version](https://img.shields.io/nuget/v/xunit.v3.extensions.ordering?color=blue)](https://www.nuget.org/packages/xunit.v3.extensions.ordering)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/xunit.v3.extensions.ordering.svg)](https://www.nuget.org/packages/xunit.v3.extensions.ordering)
-[![License](https://img.shields.io/github/license/cimpal55/xunit.v3.extensions.ordering)](LICENSE)
-![xUnit v3](https://img.shields.io/badge/xUnit-v3-blueviolet)
 
 # xunit.v3.extensions.ordering
 
-Ordering extensions for [xUnit.net v3](https://xunit.net/).
-
-This package lets you control the execution order of **test methods**, **test classes**, and **test collections** using a single `[Order]` attribute.
+Deterministic ordering for [xUnit.net v3](https://xunit.net/).
 
 Inspired by [Xunit.Extensions.Ordering](https://github.com/tomaszeman/Xunit.Extensions.Ordering), but built specifically for xUnit v3.
+
+## Why?
+
+xUnit does not guarantee execution order between tests, classes, or collections.
+
+This package provides a simple and consistent way to control test execution order of **test methods**, **test classes**, and **test collections** using a single `[Order]` attribute.
 
 ## Installation
 
@@ -64,6 +66,8 @@ AddItemToCart -> ApplyDiscount -> CompletePayment
 ```
 
 ### Order test classes within a collection
+
+> Class ordering applies only within the same test collection.
 
 Apply `[Order]` to test classes that share a collection:
 
