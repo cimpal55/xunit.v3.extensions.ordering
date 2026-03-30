@@ -1,6 +1,8 @@
 [![Build](https://github.com/cimpal55/xunit.v3.extensions.ordering/actions/workflows/ci.yml/badge.svg)](https://github.com/cimpal55/xunit.v3.extensions.ordering/actions/workflows/ci.yml)
-[![NuGet](https://img.shields.io/nuget/v/xunit.v3.extensions.ordering.svg)](https://www.nuget.org/packages/xunit.v3.extensions.ordering)
+[![NuGet Version](https://img.shields.io/nuget/v/xunit.v3.extensions.ordering?color=blue)](https://www.nuget.org/packages/xunit.v3.extensions.ordering)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/xunit.v3.extensions.ordering.svg)](https://www.nuget.org/packages/xunit.v3.extensions.ordering)
 [![License](https://img.shields.io/github/license/cimpal55/xunit.v3.extensions.ordering)](LICENSE)
+![xUnit v3](https://img.shields.io/badge/xUnit-v3-blueviolet)
 
 # xunit.v3.extensions.ordering
 
