@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Xunit.v3.Extensions.Ordering;
+namespace Xunit;
 
 /// <summary>
 /// Specifies the execution order for a test method or test class.
