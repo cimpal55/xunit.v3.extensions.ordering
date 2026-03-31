@@ -34,7 +34,9 @@ using Xunit.v3.Extensions.Ordering;
 [assembly: TestCollectionOrderer(typeof(OrderedTestCollectionOrderer))]
 ```
 
-> **Note:** `OrderedTestFramework` replaces xUnit's default execution pipeline to enable class ordering. If you only need method and collection ordering, you can omit the `TestFramework` line.
+> **Note:** The `[Order]` attribute lives in the `Xunit` namespace — no extra `using` needed in test files. The `using Xunit.v3.Extensions.Ordering` import is only required in the setup file for the infrastructure classes (`OrderedTestFramework`, `OrderedTestCaseOrderer`, `OrderedTestCollectionOrderer`).
+
+> `OrderedTestFramework` replaces xUnit's default execution pipeline to enable class ordering. If you only need method and collection ordering, you can omit the `TestFramework` line.
 
 > If collection or class order matters, parallelization should be disabled. Otherwise xUnit may run collections in parallel and ignore ordering.
 
@@ -44,7 +46,6 @@ using Xunit.v3.Extensions.Ordering;
 
 ```csharp
 using Xunit;
-using Xunit.v3.Extensions.Ordering;
 
 public class CheckoutTests
 {

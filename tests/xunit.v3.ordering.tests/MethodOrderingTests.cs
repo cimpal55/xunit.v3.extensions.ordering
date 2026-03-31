@@ -1,6 +1,5 @@
 ﻿using xunit.v3.ordering.tests;
 using Xunit;
-using Xunit.v3.Extensions.Ordering;
 
 namespace Xunit.v3.Ordering.Tests;
 
